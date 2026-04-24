@@ -23,7 +23,6 @@
         "lint:ts:fix": "pnpm prettier --write \"**/*.{ts,js}\" && pnpm eslint . --fix",
         "lint:sol": "pnpm solhint \"contracts/**/*.sol\" && pnpm prettier --no-error-on-unmatched-pattern --check \"{contracts,test}/**/*.sol\"",
         "lint:sol:fix": "pnpm solhint --fix \"contracts/**/*.sol\" && pnpm prettier --no-error-on-unmatched-pattern --write \"{contracts,test}/**/*.sol\"",
-        "gen:abi": "pnpm hardhat abi clean && pnpm hardhat abi export",
         "gen:security-reports": "pnpm hardhat clean && pnpm hardhat build && bash scripts/commands/aderyn.sh && bash scripts/commands/slither.sh",
         "gen:docs": "rm -rf generated-markups docs && pnpm hardhat markup --outdir docs && rm -rf docs/contracts/mocks"
     },
@@ -38,8 +37,6 @@
         "@nomicfoundation/hardhat-toolbox-mocha-ethers": "^3.0.4",
         "@nomicfoundation/hardhat-network-helpers": "^3.0.4",
         "@solarity/hardhat-markup": "^2.0.0",
-        "@solidstate/hardhat-abi-exporter": "^3.0.1",
-        "@solidstate/hardhat-contract-sizer": "^3.0.0",
         "@types/chai": "^5.2.3",
         "@types/chai-as-promised": "^8.0.2",
         "@types/mocha": "^10.0.10",

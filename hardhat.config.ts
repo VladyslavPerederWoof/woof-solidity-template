@@ -1,11 +1,9 @@
 import hardhatToolboxMochaEthersPlugin from "@nomicfoundation/hardhat-toolbox-mocha-ethers";
 import { configVariable, defineConfig } from "hardhat/config";
 import hardhatMarkup from "@solarity/hardhat-markup";
-import hardhatContractSizer from "@solidstate/hardhat-contract-sizer";
-import hardhatAbiExporter from "@solidstate/hardhat-abi-exporter";
 
 export default defineConfig({
-    plugins: [hardhatMarkup, hardhatContractSizer, hardhatAbiExporter, hardhatToolboxMochaEthersPlugin],
+    plugins: [hardhatMarkup, hardhatToolboxMochaEthersPlugin],
     solidity: {
         profiles: {
             default: {
